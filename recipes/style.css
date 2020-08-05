@@ -1,0 +1,238 @@
+:root {
+    box-sizing: content-box;
+    --black: #334429;
+    --color-primary: #eb594c;
+    --color-primary-lighter: #f1e5e0;
+    --color-text-lighten: #a59495;
+    --color-secondary: #c9c18e;
+    --border-radius: 0.8em;
+    font-size: calc(0.7vw + 0.6rem);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--color-primary-lighter);
+    font-family: "Mulish";
+    color: var(--black);
+}
+
+.u-flex {
+    display: flex;
+}
+.u-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+.icon-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 2em 1.8em;
+    cursor: pointer;
+}
+
+.u-shadow {
+    box-shadow: 0.1em 0.5em 1.5em -1em var(--color-primary);
+}
+
+.u-margin-bottom {
+    margin-bottom: 2em !important;
+}
+
+.u-margin-bottom-sm {
+    margin-bottom: 1em !important;
+}
+
+.u-uppercase {
+    text-transform: uppercase !important;
+}
+
+.u-text-center {
+    text-align: center !important;
+}
+.u-small-text {
+    font-size: 1rem !important;
+}
+.icon-group__icon {
+    margin-right: 0.5em !important;
+}
+
+.icon-group__info {
+    font-weight: 600;
+}
+
+.icon-group:first-of-type {
+    border-top-left-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
+}
+
+.icon-group:last-of-type {
+    border-top-right-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.icons-wrapper {
+    display: flex;
+    border-radius: var(--border-radius);
+    max-width: 28em;
+    margin: 2em auto;
+}
+.icons-wrapper > * {
+    flex: 1;
+}
+.recipe-card {
+    display: flex;
+    background-color: #fff;
+    padding: 2em;
+    box-shadow: 0.1em 0.5em 1.5em -1em var(--color-primary);
+    border-radius: var(--border-radius);
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-card__image {
+    max-width: 12em;
+    max-height: 12em;
+    margin-right: 1em;
+}
+
+.recipe-card__image img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.3em;
+}
+
+.recipe-card__description {
+    flex: 1;
+}
+
+.checked {
+    color: var(--color-primary);
+}
+
+.count {
+    font-weight: 500;
+    color: var(--color-text-lighten);
+}
+
+.recipe-card__btn {
+    border: 1px solid var(--color-secondary);
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: all 0.5s;
+}
+
+.recipe-card__btn:hover {
+    background-color: var(--color-primary);
+}
+
+.recipe-card__btn:hover i {
+    color: var(--color-primary-lighter);
+}
+
+.card-top-image {
+    border-radius: var(--border-radius);
+
+    background-color: #fff;
+    box-shadow: 0.1em 0.5em 1.5em -1em var(--color-primary);
+    padding-bottom: 1em;
+}
+
+.card-top-image__image {
+    height: 12em;
+}
+
+.card-top-image__image img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    margin-bottom: 1em;
+}
+
+.card-top-image__content {
+    padding: 1.5em;
+}
+
+.input {
+    font-family: "Malish";
+    font-size: 1rem;
+    padding: 1em;
+    border: 1px solid var(--color-secondary);
+    border-radius: 4px;
+    outline: none;
+}
+
+.btn {
+    border: 0;
+    padding: 1em;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: #fff;
+    box-shadow: 0.1em 0.2em 1.2em -0.5em var(--color-primary);
+    outline: none;
+}
+
+.card-top-image-wrapper {
+    margin: 0 auto;
+    margin-bottom: 2em;
+    max-width: 23em;
+}
+
+.card-wrapper {
+    margin: auto;
+    max-width: 35em;
+}
+
+@media (min-width: 1000px) {
+    :root {
+        font-size: 0.9rem;
+    }
+    .card-wrapper {
+        position: absolute;
+        top: 18em;
+        left: 5%;
+        transform: rotate(-10deg);
+    }
+
+    .card-top-image-wrapper {
+        position: absolute;
+        right: 12%;
+        top: 5em;
+        transform: rotate(10deg);
+    }
+
+    .icons-wrapper {
+        width: 40%;
+        margin-left: 15%;
+    }
+}
+
+.container {
+    padding: 2em;
+    margin: 0 auto;
+}
