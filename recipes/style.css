@@ -167,6 +167,8 @@ body {
     object-fit: cover;
     border-radius: var(--border-radius);
     margin-bottom: 1em;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 .card-top-image__content {
